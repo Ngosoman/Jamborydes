@@ -1,17 +1,8 @@
 import { Link } from 'react-router-dom'
+import { heroSlides } from '../../data/siteContent'
 import { ROUTES } from '../../routes/paths'
 import { getPrefetchHandlers } from '../../routes/prefetch'
 import { trackEvent } from '../../utils/analytics'
-
-const heroSlides = [
-  '/fleet/alphard-exterior-front.jpg',
-  '/fleet/prado-tx.jpg',
-  '/fleet/alphard.jpg',
-  '/fleet/alphard-cabin.jpg',
-  '/fleet/alphard-dashboard.jpg',
-  '/fleet/alphard-interior-driver.jpg',
-  '/fleet/prado-interior-seat.jpg',
-]
 
 const SLIDE_INTERVAL_SECONDS = 5
 

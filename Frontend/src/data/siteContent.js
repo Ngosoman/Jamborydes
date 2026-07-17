@@ -59,6 +59,30 @@ export const services = [
   },
 ]
 
+function buildLabeledFleetGallery(prefix, total, altLabel) {
+  return Array.from({ length: total }, (_, index) => {
+    const imageNumber = String(index + 1).padStart(2, '0')
+    return {
+      src: `/fleet/${prefix}-${imageNumber}.jpg`,
+      alt: `${altLabel} photo ${index + 1}`,
+    }
+  })
+}
+
+const pradoLabeledGallery = buildLabeledFleetGallery('prado-tx', 15, 'Toyota Prado TX')
+const alphardLabeledGallery = buildLabeledFleetGallery('alphard', 15, 'Toyota Alphard')
+
+export const heroSlides = [
+  pradoLabeledGallery[0]?.src,
+  alphardLabeledGallery[0]?.src,
+  pradoLabeledGallery[4]?.src,
+  alphardLabeledGallery[5]?.src,
+  pradoLabeledGallery[9]?.src,
+  alphardLabeledGallery[10]?.src,
+  pradoLabeledGallery[14]?.src,
+  alphardLabeledGallery[14]?.src,
+].filter(Boolean)
+
 export const fleetPreview = [
   {
     name: 'Toyota Prado TX',
@@ -67,18 +91,9 @@ export const fleetPreview = [
     luggage: '4 large bags',
     bestFor: 'Family transfers, executive movement, and intercity comfort',
     features: ['Spacious cabin', 'Raised seating comfort', 'Smooth road handling'],
-    image: '/fleet/prado-tx.jpg',
+    image: pradoLabeledGallery[0].src,
     imageAlt: 'Toyota Prado TX available for rental',
-    gallery: [
-      {
-        src: '/fleet/prado-tx.jpg',
-        alt: 'Toyota Prado TX exterior',
-      },
-      {
-        src: '/fleet/prado-interior-seat.jpg',
-        alt: 'Toyota Prado TX front seat interior',
-      },
-    ],
+    gallery: pradoLabeledGallery,
   },
   {
     name: 'Toyota Alphard',
@@ -87,30 +102,9 @@ export const fleetPreview = [
     luggage: '6 medium bags',
     bestFor: 'VIP pickups, airport transfers, and premium group travel',
     features: ['Executive interior', 'Wide rear seating', 'Premium arrival experience'],
-    image: '/fleet/alphard.jpg',
+    image: alphardLabeledGallery[0].src,
     imageAlt: 'Toyota Alphard available for rental',
-    gallery: [
-      {
-        src: '/fleet/alphard.jpg',
-        alt: 'Toyota Alphard exterior side angle',
-      },
-      {
-        src: '/fleet/alphard-exterior-front.jpg',
-        alt: 'Toyota Alphard front view',
-      },
-      {
-        src: '/fleet/alphard-interior-driver.jpg',
-        alt: 'Toyota Alphard driver seat interior',
-      },
-      {
-        src: '/fleet/alphard-dashboard.jpg',
-        alt: 'Toyota Alphard dashboard view',
-      },
-      {
-        src: '/fleet/alphard-cabin.jpg',
-        alt: 'Toyota Alphard cabin seating layout',
-      },
-    ],
+    gallery: alphardLabeledGallery,
   },
   {
     name: 'Business Sedan',
