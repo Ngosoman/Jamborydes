@@ -3,6 +3,7 @@ import { lazy, Suspense, useEffect } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
+import AnalyticsDebugPanel from './components/common/AnalyticsDebugPanel'
 import { LEGACY_REDIRECTS, ROUTES } from './routes/paths'
 import {
   loadBookPage,
@@ -54,6 +55,7 @@ function App() {
       </main>
 
       <Footer />
+      <AnalyticsDebugPanel />
     </div>
   )
 }
