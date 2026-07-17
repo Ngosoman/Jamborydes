@@ -7,6 +7,7 @@ import ServicesPage from './pages/ServicesPage'
 import FleetPage from './pages/FleetPage'
 import PricingPage from './pages/PricingPage'
 import ContactPage from './pages/ContactPage'
+import BookPage from './pages/BookPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/fleet" element={<FleetPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/book" element={<BookPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>

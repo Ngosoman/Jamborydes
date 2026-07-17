@@ -4,6 +4,14 @@ export const navLinks = [
   { href: '/fleet', label: 'Fleet' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/contact', label: 'Contact' },
+  { href: '/book', label: 'Book' },
+]
+
+export const bookingVehicleOptions = [
+  'Business Sedan',
+  'Executive SUV',
+  'Luxury Van',
+  'Group Shuttle Van',
 ]
 
 export const services = [
