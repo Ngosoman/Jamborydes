@@ -1,5 +1,5 @@
 import './App.css'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import HomePage from './pages/HomePage'
@@ -9,6 +9,7 @@ import PricingPage from './pages/PricingPage'
 import ContactPage from './pages/ContactPage'
 import BookPage from './pages/BookPage'
 import NotFoundPage from './pages/NotFoundPage'
+import { LEGACY_REDIRECTS, ROUTES } from './routes/paths'
 
 function App() {
   return (
@@ -17,12 +18,15 @@ function App() {
 
       <main>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/fleet" element={<FleetPage />} />
-          <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/book" element={<BookPage />} />
+          <Route path={ROUTES.HOME} element={<HomePage />} />
+          <Route path={ROUTES.SERVICES} element={<ServicesPage />} />
+          <Route path={ROUTES.FLEET} element={<FleetPage />} />
+          <Route path={ROUTES.PRICING} element={<PricingPage />} />
+          <Route path={ROUTES.CONTACT} element={<ContactPage />} />
+          <Route path={ROUTES.BOOK} element={<BookPage />} />
+          {LEGACY_REDIRECTS.map((redirect) => (
+            <Route key={redirect.from} path={redirect.from} element={<Navigate to={redirect.to} replace />} />
+          ))}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>

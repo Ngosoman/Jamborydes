@@ -1,10 +1,12 @@
+import { ROUTES } from '../routes/paths'
+
 export const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
-  { href: '/fleet', label: 'Fleet' },
-  { href: '/pricing', label: 'Pricing' },
-  { href: '/contact', label: 'Contact' },
-  { href: '/book', label: 'Book' },
+  { href: ROUTES.HOME, label: 'Home' },
+  { href: ROUTES.SERVICES, label: 'Services' },
+  { href: ROUTES.FLEET, label: 'Fleet' },
+  { href: ROUTES.PRICING, label: 'Pricing' },
+  { href: ROUTES.CONTACT, label: 'Contact' },
+  { href: ROUTES.BOOK, label: 'Book' },
 ]
 
 export const bookingVehicleOptions = [
