@@ -76,7 +76,12 @@ function mergeUniqueImages(...groups) {
     .filter((item) => item && item.src && !seen.has(item.src) && seen.add(item.src))
 }
 
-const pradoExcludedImages = new Set(['/fleet/prado-tx-09.jpg', '/fleet/prado-tx-10.jpg'])
+const pradoExcludedImages = new Set([
+  '/fleet/prado-tx-08.jpg',
+  '/fleet/prado-tx-09.jpg',
+  '/fleet/prado-tx-10.jpg',
+  '/fleet/prado-tx-11.jpg',
+])
 
 const pradoLabeledGallery = buildLabeledFleetGallery('prado-tx', 15, 'Toyota Prado TX').filter(
   (item) => !pradoExcludedImages.has(item.src)
