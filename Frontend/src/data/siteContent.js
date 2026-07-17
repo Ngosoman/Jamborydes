@@ -13,9 +13,9 @@ export const navLinks = [
 ]
 
 export const bookingVehicleOptions = [
+  'Toyota Prado TX',
+  'Toyota Alphard',
   'Business Sedan',
-  'Executive SUV',
-  'Luxury Van',
   'Group Shuttle Van',
 ]
 
@@ -54,14 +54,18 @@ export const services = [
 
 export const fleetPreview = [
   {
-    name: 'Executive SUV',
-    capacity: 'Up to 4 passengers',
-    luggage: '3 large bags',
+    name: 'Toyota Prado TX',
+    capacity: 'Up to 7 passengers',
+    luggage: '4 large bags',
+    image: '/fleet/prado-tx.jpg',
+    imageAlt: 'Toyota Prado TX available for rental',
   },
   {
-    name: 'Luxury Van',
+    name: 'Toyota Alphard',
     capacity: 'Up to 7 passengers',
     luggage: '6 medium bags',
+    image: '/fleet/alphard.jpg',
+    imageAlt: 'Toyota Alphard available for rental',
   },
   {
     name: 'Business Sedan',

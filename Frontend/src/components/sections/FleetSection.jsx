@@ -10,7 +10,11 @@ function FleetSection() {
       <div className="fleet-grid">
         {fleetPreview.map((vehicle) => (
           <article key={vehicle.name} className="fleet-card">
-            <div className="vehicle-thumb" aria-hidden="true"></div>
+            {vehicle.image ? (
+              <img className="vehicle-thumb" src={vehicle.image} alt={vehicle.imageAlt || vehicle.name} loading="lazy" />
+            ) : (
+              <div className="vehicle-thumb" aria-hidden="true"></div>
+            )}
             <h3>{vehicle.name}</h3>
             <p>{vehicle.capacity}</p>
             <p>{vehicle.luggage}</p>

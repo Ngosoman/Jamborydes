@@ -325,9 +325,11 @@
 }
 
 .vehicle-thumb {
+  display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
   border-radius: 0.85rem;
+  object-fit: cover;
   background:
     linear-gradient(120deg, rgba(5, 27, 54, 0.95), rgba(11, 55, 106, 0.8)),
     linear-gradient(25deg, rgba(243, 125, 39, 0.55), rgba(243, 125, 39, 0));
