@@ -255,6 +255,13 @@
   color: var(--text-700);
 }
 
+.testimonial-role {
+  margin-top: 0.35rem;
+  color: #5f738e;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
 .fleet-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
