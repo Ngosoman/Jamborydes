@@ -37,6 +37,22 @@
   color: #071f3d;
 }
 
+.top-nav .is-active {
+  color: #061f3d;
+  position: relative;
+}
+
+.top-nav .is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.35rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(120deg, #f37d27, #ffae6c);
+}
+
 .hero-section {
   position: relative;
   overflow: hidden;
@@ -76,6 +92,30 @@
   flex-wrap: wrap;
   gap: 0.8rem;
   margin-top: 1.5rem;
+}
+
+.page-intro {
+  margin-top: 0.8rem;
+  margin-bottom: 2rem;
+  border-radius: 1.25rem;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  border: 1px solid rgba(6, 36, 71, 0.12);
+  background:
+    radial-gradient(circle at 85% 20%, rgba(243, 125, 39, 0.15), transparent 45%),
+    linear-gradient(150deg, #f8fbff 0%, #ffffff 100%);
+}
+
+.page-intro h1 {
+  margin: 0.55rem 0 0;
+  max-width: 26ch;
+  color: #071d39;
+  font-size: clamp(1.75rem, 4.1vw, 3rem);
+}
+
+.page-intro p {
+  margin: 0.85rem 0 0;
+  max-width: 68ch;
+  color: var(--text-700);
 }
 
 .primary-btn,
