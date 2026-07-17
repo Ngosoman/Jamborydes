@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { navLinks } from '../../data/siteContent'
 import { getPrefetchHandlers } from '../../routes/prefetch'
+import { trackEvent } from '../../utils/analytics'
 
 function Header() {
   return (
@@ -14,6 +15,13 @@ function Header() {
             className={({ isActive }) => (isActive ? 'is-active' : '')}
             end
             {...getPrefetchHandlers(link.href)}
+            onClick={() =>
+              trackEvent('cta_click', {
+                location: 'header_nav',
+                label: link.label,
+                target: link.href,
+              })
+            }
           >
             {link.label}
           </NavLink>

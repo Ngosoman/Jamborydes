@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ROUTES } from '../../routes/paths'
 import { getPrefetchHandlers } from '../../routes/prefetch'
+import { trackEvent } from '../../utils/analytics'
 
 function HeroSection() {
   return (
@@ -12,10 +13,32 @@ function HeroSection() {
         Jamboryde keeps every trip smooth from first contact to final drop-off.
       </p>
       <div className="hero-actions">
-        <Link to={ROUTES.BOOK} className="primary-btn" {...getPrefetchHandlers(ROUTES.BOOK)}>
+        <Link
+          to={ROUTES.BOOK}
+          className="primary-btn"
+          {...getPrefetchHandlers(ROUTES.BOOK)}
+          onClick={() =>
+            trackEvent('cta_click', {
+              location: 'hero',
+              label: 'Book Now',
+              target: ROUTES.BOOK,
+            })
+          }
+        >
           Book Now
         </Link>
-        <Link to={ROUTES.SERVICES} className="ghost-btn" {...getPrefetchHandlers(ROUTES.SERVICES)}>
+        <Link
+          to={ROUTES.SERVICES}
+          className="ghost-btn"
+          {...getPrefetchHandlers(ROUTES.SERVICES)}
+          onClick={() =>
+            trackEvent('cta_click', {
+              location: 'hero',
+              label: 'Explore Services',
+              target: ROUTES.SERVICES,
+            })
+          }
+        >
           Explore Services
         </Link>
       </div>

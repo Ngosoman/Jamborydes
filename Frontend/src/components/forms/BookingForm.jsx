@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { bookingVehicleOptions, services } from '../../data/siteContent'
 import { buildBookingWhatsAppMessage, buildWhatsAppUrl } from '../../utils/bookingMessage'
+import { trackEvent } from '../../utils/analytics'
 
 const INITIAL_FORM = {
   fullName: '',
@@ -55,6 +56,10 @@ function BookingForm() {
 
     if (Object.keys(nextErrors).length > 0) {
       setErrors(nextErrors)
+      trackEvent('booking_submit_validation_failed', {
+        fieldCount: Object.keys(nextErrors).length,
+        fields: Object.keys(nextErrors),
+      })
       return
     }
 
@@ -62,6 +67,12 @@ function BookingForm() {
     const whatsappUrl = buildWhatsAppUrl('254700000000', message)
 
     setIsSubmitted(true)
+    trackEvent('booking_submit_success', {
+      serviceType: formData.serviceType,
+      vehicleType: formData.vehicleType || 'not_selected',
+      passengers: formData.passengers,
+      hasFlightNumber: Boolean(formData.flightNumber),
+    })
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
   }
 

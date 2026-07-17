@@ -1,6 +1,6 @@
 import './App.css'
-import { lazy, Suspense } from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { lazy, Suspense, useEffect } from 'react'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import { LEGACY_REDIRECTS, ROUTES } from './routes/paths'
@@ -13,6 +13,7 @@ import {
   loadPricingPage,
   loadServicesPage,
 } from './routes/prefetch'
+import { trackPageView } from './utils/analytics'
 
 const HomePage = lazy(loadHomePage)
 const ServicesPage = lazy(loadServicesPage)
@@ -23,6 +24,14 @@ const BookPage = lazy(loadBookPage)
 const NotFoundPage = lazy(loadNotFoundPage)
 
 function App() {
+  const location = useLocation()
+
+  useEffect(() => {
+    trackPageView(location.pathname, {
+      search: location.search,
+    })
+  }, [location.pathname, location.search])
+
   return (
     <div className="site-shell">
       <Header />
