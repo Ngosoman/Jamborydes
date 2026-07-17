@@ -1,10 +1,9 @@
 export const navLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#services', label: 'Services' },
-  { href: '#fleet', label: 'Fleet' },
-  { href: '#pricing', label: 'Pricing' },
-  { href: '#faq', label: 'FAQs' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/fleet', label: 'Fleet' },
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 export const services = [
