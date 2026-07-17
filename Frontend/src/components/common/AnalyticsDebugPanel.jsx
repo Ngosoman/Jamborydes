@@ -29,16 +29,53 @@ function shouldShowPanel() {
 function AnalyticsDebugPanel() {
   const [isOpen, setIsOpen] = useState(false)
   const [events, setEvents] = useState(() => getAnalyticsEvents())
+  const [eventFilter, setEventFilter] = useState('all')
+  const [startDate, setStartDate] = useState('')
+  const [endDate, setEndDate] = useState('')
+
+  const eventTypes = useMemo(() => {
+    const types = new Set(events.map((entry) => entry.event).filter(Boolean))
+    return ['all', ...Array.from(types).sort()]
+  }, [events])
+
+  const filteredEvents = useMemo(() => {
+    return events.filter((entry) => {
+      if (eventFilter !== 'all' && entry.event !== eventFilter) {
+        return false
+      }
+
+      const timestampMs = Date.parse(entry.timestamp || '')
+      if (Number.isNaN(timestampMs)) {
+        return false
+      }
+
+      if (startDate) {
+        const startMs = Date.parse(startDate)
+        if (!Number.isNaN(startMs) && timestampMs < startMs) {
+          return false
+        }
+      }
+
+      if (endDate) {
+        const endMs = Date.parse(endDate)
+        if (!Number.isNaN(endMs) && timestampMs > endMs) {
+          return false
+        }
+      }
+
+      return true
+    })
+  }, [events, eventFilter, startDate, endDate])
 
   const eventSummary = useMemo(() => {
     const summary = {}
 
-    for (const entry of events) {
+    for (const entry of filteredEvents) {
       summary[entry.event] = (summary[entry.event] || 0) + 1
     }
 
     return Object.entries(summary).sort((a, b) => b[1] - a[1])
-  }, [events])
+  }, [filteredEvents])
 
   if (!shouldShowPanel()) {
     return null
@@ -53,15 +90,21 @@ function AnalyticsDebugPanel() {
     refresh()
   }
 
+  function resetFilters() {
+    setEventFilter('all')
+    setStartDate('')
+    setEndDate('')
+  }
+
   function exportJson() {
-    const payload = JSON.stringify(events, null, 2)
+    const payload = JSON.stringify(filteredEvents, null, 2)
     downloadFile('jamboryde-analytics-events.json', payload, 'application/json;charset=utf-8')
   }
 
   function exportCsv() {
     const rows = [
       ['timestamp', 'event', 'path', 'location', 'label', 'target', 'payload'],
-      ...events.map((entry) => [
+      ...filteredEvents.map((entry) => [
         entry.timestamp || '',
         entry.event || '',
         entry.payload?.path || '',
@@ -84,15 +127,38 @@ function AnalyticsDebugPanel() {
         onClick={() => setIsOpen((current) => !current)}
         aria-expanded={isOpen}
       >
-        Analytics ({events.length})
+        Analytics ({filteredEvents.length}/{events.length})
       </button>
 
       {isOpen ? (
         <div className="analytics-panel">
           <p className="analytics-title">Event Summary</p>
+          <div className="analytics-filters">
+            <label>
+              Event
+              <select value={eventFilter} onChange={(event) => setEventFilter(event.target.value)}>
+                {eventTypes.map((type) => (
+                  <option key={type} value={type}>
+                    {type === 'all' ? 'All events' : type}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              Start
+              <input type="datetime-local" value={startDate} onChange={(event) => setStartDate(event.target.value)} />
+            </label>
+            <label>
+              End
+              <input type="datetime-local" value={endDate} onChange={(event) => setEndDate(event.target.value)} />
+            </label>
+          </div>
           <div className="analytics-actions">
             <button type="button" onClick={refresh}>
               Refresh
+            </button>
+            <button type="button" onClick={resetFilters}>
+              Reset Filters
             </button>
             <button type="button" onClick={exportJson}>
               Export JSON
