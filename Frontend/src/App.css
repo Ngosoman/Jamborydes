@@ -268,6 +268,47 @@
   gap: 1rem;
 }
 
+.fleet-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.fleet-details-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(6, 36, 71, 0.14);
+  background: #ffffff;
+  box-shadow: 0 12px 22px rgba(9, 30, 58, 0.1);
+  padding: 0.9rem;
+}
+
+.fleet-category {
+  margin: 0.2rem 0 0;
+  color: #5f738e;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.fleet-best-for {
+  margin-top: 0.6rem;
+  font-weight: 600;
+  color: #1a406d;
+}
+
+.fleet-feature-list {
+  margin: 0.75rem 0 0;
+  padding-left: 1rem;
+  color: var(--text-700);
+  display: grid;
+  gap: 0.35rem;
+}
+
+.fleet-book-btn {
+  margin-top: 0.9rem;
+}
+
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -577,6 +618,7 @@
 @media (max-width: 900px) {
   .card-grid,
   .fleet-grid,
+  .fleet-details-grid,
   .trust-section,
   .faq-grid,
   .contact-grid,

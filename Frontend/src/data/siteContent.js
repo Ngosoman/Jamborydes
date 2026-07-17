@@ -55,22 +55,31 @@ export const services = [
 export const fleetPreview = [
   {
     name: 'Toyota Prado TX',
+    category: 'Executive SUV',
     capacity: 'Up to 7 passengers',
     luggage: '4 large bags',
+    bestFor: 'Family transfers, executive movement, and intercity comfort',
+    features: ['Spacious cabin', 'Raised seating comfort', 'Smooth road handling'],
     image: '/fleet/prado-tx.jpg',
     imageAlt: 'Toyota Prado TX available for rental',
   },
   {
     name: 'Toyota Alphard',
+    category: 'Luxury Van',
     capacity: 'Up to 7 passengers',
     luggage: '6 medium bags',
+    bestFor: 'VIP pickups, airport transfers, and premium group travel',
+    features: ['Executive interior', 'Wide rear seating', 'Premium arrival experience'],
     image: '/fleet/alphard.jpg',
     imageAlt: 'Toyota Alphard available for rental',
   },
   {
     name: 'Business Sedan',
+    category: 'City Comfort Sedan',
     capacity: 'Up to 3 passengers',
     luggage: '2 large bags',
+    bestFor: 'Daily city transfers and efficient business travel',
+    features: ['Compact convenience', 'Comfortable ride quality', 'Ideal for urban movement'],
   },
 ]
 

@@ -1,5 +1,5 @@
 import PageIntro from '../components/common/PageIntro'
-import { BookingBanner, FleetSection } from '../components/sections'
+import { BookingBanner, FleetDetailsSection, FleetSection } from '../components/sections'
 import SeoMeta from '../components/seo/SeoMeta'
 
 function FleetPage() {
@@ -16,6 +16,7 @@ function FleetPage() {
         description="From executive sedans to luxury vans, our fleet supports solo travel, families, and corporate movement."
       />
       <FleetSection />
+      <FleetDetailsSection />
       <BookingBanner />
     </>
   )
