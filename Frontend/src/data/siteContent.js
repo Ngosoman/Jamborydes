@@ -69,18 +69,73 @@ function buildLabeledFleetGallery(prefix, total, altLabel) {
   })
 }
 
+function mergeUniqueImages(...groups) {
+  const seen = new Set()
+  return groups
+    .flat()
+    .filter((item) => item && item.src && !seen.has(item.src) && seen.add(item.src))
+}
+
 const pradoLabeledGallery = buildLabeledFleetGallery('prado-tx', 15, 'Toyota Prado TX')
 const alphardLabeledGallery = buildLabeledFleetGallery('alphard', 15, 'Toyota Alphard')
 
+const pradoExteriorGallery = [
+  {
+    src: '/fleet/prado-tx.jpg',
+    alt: 'Toyota Prado TX exterior view',
+  },
+]
+
+const pradoInteriorGallery = [
+  {
+    src: '/fleet/prado-interior-seat.jpg',
+    alt: 'Toyota Prado TX interior seating',
+  },
+]
+
+const alphardExteriorGallery = [
+  {
+    src: '/fleet/alphard.jpg',
+    alt: 'Toyota Alphard exterior side view',
+  },
+  {
+    src: '/fleet/alphard-exterior-front.jpg',
+    alt: 'Toyota Alphard exterior front view',
+  },
+]
+
+const alphardInteriorGallery = [
+  {
+    src: '/fleet/alphard-interior-driver.jpg',
+    alt: 'Toyota Alphard driver interior view',
+  },
+  {
+    src: '/fleet/alphard-dashboard.jpg',
+    alt: 'Toyota Alphard dashboard interior view',
+  },
+  {
+    src: '/fleet/alphard-cabin.jpg',
+    alt: 'Toyota Alphard cabin interior seating',
+  },
+]
+
+const pradoGallery = mergeUniqueImages(pradoExteriorGallery, pradoInteriorGallery, pradoLabeledGallery)
+const alphardGallery = mergeUniqueImages(
+  alphardExteriorGallery,
+  alphardInteriorGallery,
+  alphardLabeledGallery
+)
+
 export const heroSlides = [
-  pradoLabeledGallery[0]?.src,
-  alphardLabeledGallery[0]?.src,
+  pradoExteriorGallery[0]?.src,
+  alphardExteriorGallery[0]?.src,
+  alphardExteriorGallery[1]?.src,
+  pradoInteriorGallery[0]?.src,
+  alphardInteriorGallery[0]?.src,
+  alphardInteriorGallery[1]?.src,
+  alphardInteriorGallery[2]?.src,
   pradoLabeledGallery[4]?.src,
   alphardLabeledGallery[5]?.src,
-  pradoLabeledGallery[9]?.src,
-  alphardLabeledGallery[10]?.src,
-  pradoLabeledGallery[14]?.src,
-  alphardLabeledGallery[14]?.src,
 ].filter(Boolean)
 
 export const fleetPreview = [
@@ -91,9 +146,9 @@ export const fleetPreview = [
     luggage: '4 large bags',
     bestFor: 'Family transfers, executive movement, and intercity comfort',
     features: ['Spacious cabin', 'Raised seating comfort', 'Smooth road handling'],
-    image: pradoLabeledGallery[0].src,
+    image: pradoGallery[0].src,
     imageAlt: 'Toyota Prado TX available for rental',
-    gallery: pradoLabeledGallery,
+    gallery: pradoGallery,
   },
   {
     name: 'Toyota Alphard',
@@ -102,9 +157,9 @@ export const fleetPreview = [
     luggage: '6 medium bags',
     bestFor: 'VIP pickups, airport transfers, and premium group travel',
     features: ['Executive interior', 'Wide rear seating', 'Premium arrival experience'],
-    image: alphardLabeledGallery[0].src,
+    image: alphardGallery[0].src,
     imageAlt: 'Toyota Alphard available for rental',
-    gallery: alphardLabeledGallery,
+    gallery: alphardGallery,
   },
   {
     name: 'Business Sedan',
