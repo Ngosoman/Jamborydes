@@ -71,15 +71,14 @@
 }
 
 .hero-slide {
-  --duration: 21s;
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  animation: hero-fade var(--duration) linear infinite;
-  animation-delay: calc(var(--slide-index) * 7s);
+  animation: hero-fade calc(var(--slide-count) * var(--slide-interval)) linear infinite;
+  animation-delay: calc(var(--slide-index) * var(--slide-interval));
 }
 
 .hero-slideshow::after {
@@ -788,13 +787,13 @@
   0% {
     opacity: 0;
   }
-  6% {
+  4% {
     opacity: 1;
   }
-  28% {
+  12% {
     opacity: 1;
   }
-  34% {
+  18% {
     opacity: 0;
   }
   100% {

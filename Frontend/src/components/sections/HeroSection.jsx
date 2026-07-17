@@ -3,14 +3,34 @@ import { ROUTES } from '../../routes/paths'
 import { getPrefetchHandlers } from '../../routes/prefetch'
 import { trackEvent } from '../../utils/analytics'
 
-const heroSlides = ['/fleet/alphard-exterior-front.jpg', '/fleet/prado-tx.jpg', '/fleet/alphard.jpg']
+const heroSlides = [
+  '/fleet/alphard-exterior-front.jpg',
+  '/fleet/prado-tx.jpg',
+  '/fleet/alphard.jpg',
+  '/fleet/alphard-cabin.jpg',
+  '/fleet/alphard-dashboard.jpg',
+  '/fleet/alphard-interior-driver.jpg',
+  '/fleet/prado-interior-seat.jpg',
+]
+
+const SLIDE_INTERVAL_SECONDS = 5
 
 function HeroSection() {
   return (
     <section className="hero-section">
       <div className="hero-slideshow" aria-hidden="true">
         {heroSlides.map((image, index) => (
-          <img key={image} src={image} alt="" className="hero-slide" style={{ '--slide-index': index }} />
+          <img
+            key={image}
+            src={image}
+            alt=""
+            className="hero-slide"
+            style={{
+              '--slide-index': index,
+              '--slide-count': heroSlides.length,
+              '--slide-interval': `${SLIDE_INTERVAL_SECONDS}s`,
+            }}
+          />
         ))}
       </div>
 
