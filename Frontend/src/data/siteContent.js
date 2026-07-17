@@ -2,9 +2,12 @@ import { ROUTES } from '../routes/paths'
 
 export const navLinks = [
   { href: ROUTES.HOME, label: 'Home' },
+  { href: ROUTES.ABOUT, label: 'About' },
   { href: ROUTES.SERVICES, label: 'Services' },
   { href: ROUTES.FLEET, label: 'Fleet' },
   { href: ROUTES.PRICING, label: 'Pricing' },
+  { href: ROUTES.FAQS, label: 'FAQs' },
+  { href: ROUTES.TESTIMONIALS, label: 'Testimonials' },
   { href: ROUTES.CONTACT, label: 'Contact' },
   { href: ROUTES.BOOK, label: 'Book' },
 ]
@@ -136,4 +139,40 @@ export const contactItems = [
   { title: 'Email', value: 'bookings@jamboryde.com' },
   { title: 'Operating Hours', value: 'Mon - Sun: 24/7 by booking' },
   { title: 'Office Base', value: 'Nairobi, Kenya' },
+]
+
+export const companyValues = [
+  {
+    title: 'Reliability',
+    description: 'Consistent pickups, accurate timing, and proactive updates for every trip.',
+  },
+  {
+    title: 'Safety',
+    description: 'Professional drivers, maintained vehicles, and customer-first travel standards.',
+  },
+  {
+    title: 'Professionalism',
+    description: 'Clear communication, polished service, and corporate-ready operations.',
+  },
+]
+
+export const testimonials = [
+  {
+    name: 'Nancy W.',
+    role: 'Business Traveler',
+    quote:
+      'Jamboryde is always on time for my airport transfers. The WhatsApp coordination and driver professionalism are excellent.',
+  },
+  {
+    name: 'Karanja M.',
+    role: 'Corporate Admin',
+    quote:
+      'We use Jamboryde for executive pickups and client movement. They are dependable and easy to work with.',
+  },
+  {
+    name: 'Amina T.',
+    role: 'Family Traveler',
+    quote:
+      'Our intercity trip was comfortable and smooth. The team handled timing and luggage details perfectly.',
+  },
 ]
