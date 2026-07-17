@@ -1,4 +1,4 @@
-import PageIntro from '../components/common/PageIntro'
+﻿import PageIntro from '../components/common/PageIntro'
 import { BookingBanner } from '../components/sections'
 import SeoMeta from '../components/seo/SeoMeta'
 import { testimonials } from '../data/siteContent'
@@ -8,12 +8,12 @@ function TestimonialsPage() {
     <>
       <SeoMeta
         title="Customer Testimonials"
-        description="Read what travelers and corporate clients say about Jamboryde Travel's reliability, professionalism, and comfort."
+        description="Read what travelers and corporate clients say about Jamborydes Travel's reliability, professionalism, and comfort."
         path="/testimonials"
       />
       <PageIntro
         kicker="Testimonials"
-        title="What our customers say about their Jamboryde experience"
+        title="What our customers say about their Jamborydes experience"
         description="Feedback from airport transfer riders, corporate teams, and families traveling in Nairobi and beyond."
       />
       <section className="section">
@@ -33,3 +33,5 @@ function TestimonialsPage() {
 }
 
 export default TestimonialsPage
+
+

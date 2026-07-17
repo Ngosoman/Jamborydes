@@ -1,10 +1,10 @@
-function formatField(label, value) {
+﻿function formatField(label, value) {
   return `*${label}:* ${value || 'N/A'}`
 }
 
 export function buildBookingWhatsAppMessage(formData) {
   const lines = [
-    '*JAMBORYDE BOOKING REQUEST*',
+    '*Jamborydes BOOKING REQUEST*',
     '',
     formatField('Full Name', formData.fullName),
     formatField('Phone Number', formData.phone),
@@ -26,3 +26,5 @@ export function buildBookingWhatsAppMessage(formData) {
 export function buildWhatsAppUrl(phone, message) {
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
 }
+
+

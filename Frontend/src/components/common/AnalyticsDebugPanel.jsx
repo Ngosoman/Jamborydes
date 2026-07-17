@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+﻿import { useMemo, useState } from 'react'
 import { clearAnalyticsEvents, getAnalyticsEvents } from '../../utils/analytics'
 
 function toCsvValue(value) {
@@ -98,7 +98,7 @@ function AnalyticsDebugPanel() {
 
   function exportJson() {
     const payload = JSON.stringify(filteredEvents, null, 2)
-    downloadFile('jamboryde-analytics-events.json', payload, 'application/json;charset=utf-8')
+    downloadFile('Jamborydes-analytics-events.json', payload, 'application/json;charset=utf-8')
   }
 
   function exportCsv() {
@@ -116,7 +116,7 @@ function AnalyticsDebugPanel() {
     ]
 
     const content = rows.map((row) => row.map((cell) => toCsvValue(cell)).join(',')).join('\n')
-    downloadFile('jamboryde-analytics-events.csv', content, 'text/csv;charset=utf-8')
+    downloadFile('Jamborydes-analytics-events.csv', content, 'text/csv;charset=utf-8')
   }
 
   return (
@@ -186,3 +186,5 @@ function AnalyticsDebugPanel() {
 }
 
 export default AnalyticsDebugPanel
+
+

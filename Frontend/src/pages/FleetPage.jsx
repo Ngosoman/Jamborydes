@@ -1,4 +1,4 @@
-import PageIntro from '../components/common/PageIntro'
+﻿import PageIntro from '../components/common/PageIntro'
 import { BookingBanner, FleetDetailsSection, FleetGallerySection, FleetSection } from '../components/sections'
 import SeoMeta from '../components/seo/SeoMeta'
 
@@ -7,7 +7,7 @@ function FleetPage() {
     <>
       <SeoMeta
         title="Fleet Options for Nairobi Transfers"
-        description="Browse Jamboryde vehicle options for solo, family, and corporate transport including sedans, SUVs, and luxury vans."
+        description="Browse Jamborydes vehicle options for solo, family, and corporate transport including sedans, SUVs, and luxury vans."
         path="/fleet"
       />
       <PageIntro
@@ -24,3 +24,5 @@ function FleetPage() {
 }
 
 export default FleetPage
+
+

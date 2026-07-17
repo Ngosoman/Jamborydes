@@ -1,4 +1,4 @@
-import PageIntro from '../components/common/PageIntro'
+﻿import PageIntro from '../components/common/PageIntro'
 import BookingForm from '../components/forms/BookingForm'
 import SeoMeta from '../components/seo/SeoMeta'
 
@@ -7,7 +7,7 @@ function BookPage() {
     <>
       <SeoMeta
         title="Book Airport Transfer or Car Hire"
-        description="Submit your transfer details online and send your quote request to Jamboryde Travel via WhatsApp for fast confirmation."
+        description="Submit your transfer details online and send your quote request to Jamborydes Travel via WhatsApp for fast confirmation."
         path="/book"
       />
       <PageIntro
@@ -21,3 +21,5 @@ function BookPage() {
 }
 
 export default BookPage
+
+

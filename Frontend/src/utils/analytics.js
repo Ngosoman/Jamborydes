@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'jamboryde_analytics_events'
+﻿const STORAGE_KEY = 'Jamborydes_analytics_events'
 const MAX_EVENTS = 300
 
 function getStoredEvents() {
@@ -68,8 +68,10 @@ export function clearAnalyticsEvents() {
 }
 
 if (typeof window !== 'undefined') {
-  window.jamborydeAnalytics = {
+  window.JamborydesAnalytics = {
     getEvents: getAnalyticsEvents,
     clearEvents: clearAnalyticsEvents,
   }
 }
+
+

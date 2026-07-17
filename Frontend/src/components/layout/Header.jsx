@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+﻿import { NavLink } from 'react-router-dom'
 import { navLinks } from '../../data/siteContent'
 import { COMPANY_CONTACT } from '../../data/siteContent'
 import { getPrefetchHandlers } from '../../routes/prefetch'
@@ -7,7 +7,7 @@ import { trackEvent } from '../../utils/analytics'
 function Header() {
   return (
     <header className="topbar">
-      <p className="brand">JAMBORYDE TRAVEL</p>
+      <p className="brand">Jamborydes TRAVEL</p>
       <nav className="top-nav" aria-label="Main navigation">
         {navLinks.map((link) => (
           <NavLink
@@ -36,3 +36,5 @@ function Header() {
 }
 
 export default Header
+
+

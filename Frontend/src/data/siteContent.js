@@ -1,10 +1,10 @@
-import { ROUTES } from '../routes/paths'
+﻿import { ROUTES } from '../routes/paths'
 
 export const COMPANY_CONTACT = {
   phoneRaw: '254143300151',
   phoneDisplay: '+254143300151',
   whatsappUrl: 'https://wa.me/254143300151',
-  email: 'bookings@jamboryde.com',
+  email: 'bookings@Jamborydes.com',
 }
 
 export const navLinks = [
@@ -271,13 +271,13 @@ export const testimonials = [
     name: 'Nancy W.',
     role: 'Business Traveler',
     quote:
-      'Jamboryde is always on time for my airport transfers. The WhatsApp coordination and driver professionalism are excellent.',
+      'Jamborydes is always on time for my airport transfers. The WhatsApp coordination and driver professionalism are excellent.',
   },
   {
     name: 'Karanja M.',
     role: 'Corporate Admin',
     quote:
-      'We use Jamboryde for executive pickups and client movement. They are dependable and easy to work with.',
+      'We use Jamborydes for executive pickups and client movement. They are dependable and easy to work with.',
   },
   {
     name: 'Amina T.',
@@ -286,3 +286,5 @@ export const testimonials = [
       'Our intercity trip was comfortable and smooth. The team handled timing and luggage details perfectly.',
   },
 ]
+
+

@@ -1,4 +1,4 @@
-import PageIntro from '../components/common/PageIntro'
+﻿import PageIntro from '../components/common/PageIntro'
 import { BookingBanner, AboutSection, TrustSection } from '../components/sections'
 import SeoMeta from '../components/seo/SeoMeta'
 import { companyValues } from '../data/siteContent'
@@ -7,14 +7,14 @@ function AboutPage() {
   return (
     <>
       <SeoMeta
-        title="About Jamboryde Travel"
-        description="Learn about Jamboryde Travel's mission, service standards, and commitment to safe, reliable, professional transport in Nairobi."
+        title="About Jamborydes Travel"
+        description="Learn about Jamborydes Travel's mission, service standards, and commitment to safe, reliable, professional transport in Nairobi."
         path="/about"
       />
       <PageIntro
         kicker="About"
         title="A Nairobi transport brand built on trust, punctuality, and comfort"
-        description="Jamboryde Travel serves individual travelers, families, and corporate clients with airport transfers, city rides, and intercity travel."
+        description="Jamborydes Travel serves individual travelers, families, and corporate clients with airport transfers, city rides, and intercity travel."
       />
       <AboutSection />
       <section className="section">
@@ -38,3 +38,5 @@ function AboutPage() {
 }
 
 export default AboutPage
+
+

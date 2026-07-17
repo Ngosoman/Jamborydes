@@ -1,4 +1,4 @@
-import PageIntro from '../components/common/PageIntro'
+﻿import PageIntro from '../components/common/PageIntro'
 import { BookingBanner, ContactSection, FaqSection } from '../components/sections'
 import SeoMeta from '../components/seo/SeoMeta'
 
@@ -7,7 +7,7 @@ function FaqsPage() {
     <>
       <SeoMeta
         title="Frequently Asked Questions"
-        description="Find answers about booking, airport delays, pricing, routes, and transport coverage from Jamboryde Travel."
+        description="Find answers about booking, airport delays, pricing, routes, and transport coverage from Jamborydes Travel."
         path="/faqs"
       />
       <PageIntro
@@ -23,3 +23,5 @@ function FaqsPage() {
 }
 
 export default FaqsPage
+
+

@@ -1,4 +1,4 @@
-import { serviceAreas } from '../../data/siteContent'
+﻿import { serviceAreas } from '../../data/siteContent'
 
 function AboutSection() {
   return (
@@ -8,7 +8,7 @@ function AboutSection() {
         <h2>Nairobi transport built on reliability, safety, and professionalism</h2>
       </div>
       <p>
-        Jamboryde Travel provides airport transfers, city rides, intercity travel, and corporate transport with a
+        Jamborydes Travel provides airport transfers, city rides, intercity travel, and corporate transport with a
         clear service promise: punctual pickups, experienced drivers, and customer-first communication.
       </p>
       <div className="area-chips" role="list" aria-label="Service areas">
@@ -23,3 +23,5 @@ function AboutSection() {
 }
 
 export default AboutSection
+
+

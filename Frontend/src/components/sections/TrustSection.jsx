@@ -1,10 +1,10 @@
-import { trustPoints } from '../../data/siteContent'
+﻿import { trustPoints } from '../../data/siteContent'
 
 function TrustSection() {
   return (
     <section className="section trust-section">
       <div>
-        <p className="kicker">Why Jamboryde</p>
+        <p className="kicker">Why Jamborydes</p>
         <h2>Professional drivers, dependable timing, and premium comfort</h2>
       </div>
       <ul>
@@ -17,3 +17,5 @@ function TrustSection() {
 }
 
 export default TrustSection
+
+

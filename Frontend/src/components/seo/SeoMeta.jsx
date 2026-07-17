@@ -1,6 +1,6 @@
-import { useEffect } from 'react'
+﻿import { useEffect } from 'react'
 
-const SITE_NAME = 'Jamboryde Travel'
+const SITE_NAME = 'Jamborydes Travel'
 
 function upsertMeta(key, value, attribute = 'name') {
   let element = document.head.querySelector(`meta[${attribute}="${key}"]`)
@@ -53,3 +53,5 @@ function SeoMeta({ title, description, path = '/', noindex = false }) {
 }
 
 export default SeoMeta
+
+

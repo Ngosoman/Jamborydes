@@ -1,4 +1,4 @@
-import {
+﻿import {
   AboutSection,
   BookingBanner,
   ContactSection,
@@ -17,7 +17,7 @@ function HomePage() {
     <>
       <SeoMeta
         title="Airport Transfers and Car Hire in Nairobi"
-        description="Jamboryde Travel provides reliable airport transfers, city rides, intercity travel, and corporate transport in Nairobi and beyond."
+        description="Jamborydes Travel provides reliable airport transfers, city rides, intercity travel, and corporate transport in Nairobi and beyond."
         path="/"
       />
       <LocalBusinessSchema />
@@ -35,3 +35,5 @@ function HomePage() {
 }
 
 export default HomePage
+
+

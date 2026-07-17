@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import { heroSlides } from '../../data/siteContent'
 import { ROUTES } from '../../routes/paths'
 import { getPrefetchHandlers } from '../../routes/prefetch'
@@ -26,7 +26,7 @@ function HeroSection() {
       </div>
 
       <div className="hero-content">
-        <p className="hero-tag">Nairobi Car Hire • Airport Transfers • Corporate Mobility</p>
+        <p className="hero-tag">Nairobi Car Hire â€¢ Airport Transfers â€¢ Corporate Mobility</p>
         <h1>Your Journey, Our Priority</h1>
         <p className="hero-copy">
           Safe, punctual, and premium transport in Nairobi and beyond. From JKIA pickups to executive travel,
@@ -68,3 +68,5 @@ function HeroSection() {
 }
 
 export default HeroSection
+
+

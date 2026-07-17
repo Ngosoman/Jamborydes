@@ -1,10 +1,10 @@
-import { COMPANY_CONTACT } from '../../data/siteContent'
+﻿import { COMPANY_CONTACT } from '../../data/siteContent'
 import { buildWhatsAppUrl } from '../../utils/bookingMessage'
 
 export default function WhatsAppButton() {
   const whatsappUrl = buildWhatsAppUrl(
     COMPANY_CONTACT.phoneRaw,
-    'Hello Jamboryde Travel, I would like to make a booking.'
+    'Hello Jamborydes Travel, I would like to make a booking.'
   )
 
   return (
@@ -21,3 +21,5 @@ export default function WhatsAppButton() {
     </a>
   );
 }
+
+

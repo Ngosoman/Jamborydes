@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import LogoMark from '../common/LogoMark';
 import { COMPANY_CONTACT } from '../../data/siteContent';
@@ -20,7 +20,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-3" onClick={() => setMobileOpen(false)}>
           <LogoMark size={30} />
           <span className="font-display text-xl font-bold text-white tracking-widest">
-            JAMBORYDES
+            Jamborydes
           </span>
         </Link>
 
@@ -90,3 +90,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+
