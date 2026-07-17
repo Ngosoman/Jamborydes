@@ -62,6 +62,16 @@ export const fleetPreview = [
     features: ['Spacious cabin', 'Raised seating comfort', 'Smooth road handling'],
     image: '/fleet/prado-tx.jpg',
     imageAlt: 'Toyota Prado TX available for rental',
+    gallery: [
+      {
+        src: '/fleet/prado-tx.jpg',
+        alt: 'Toyota Prado TX exterior',
+      },
+      {
+        src: '/fleet/prado-interior-seat.jpg',
+        alt: 'Toyota Prado TX front seat interior',
+      },
+    ],
   },
   {
     name: 'Toyota Alphard',
@@ -72,6 +82,28 @@ export const fleetPreview = [
     features: ['Executive interior', 'Wide rear seating', 'Premium arrival experience'],
     image: '/fleet/alphard.jpg',
     imageAlt: 'Toyota Alphard available for rental',
+    gallery: [
+      {
+        src: '/fleet/alphard.jpg',
+        alt: 'Toyota Alphard exterior side angle',
+      },
+      {
+        src: '/fleet/alphard-exterior-front.jpg',
+        alt: 'Toyota Alphard front view',
+      },
+      {
+        src: '/fleet/alphard-interior-driver.jpg',
+        alt: 'Toyota Alphard driver seat interior',
+      },
+      {
+        src: '/fleet/alphard-dashboard.jpg',
+        alt: 'Toyota Alphard dashboard view',
+      },
+      {
+        src: '/fleet/alphard-cabin.jpg',
+        alt: 'Toyota Alphard cabin seating layout',
+      },
+    ],
   },
   {
     name: 'Business Sedan',

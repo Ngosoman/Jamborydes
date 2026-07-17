@@ -309,6 +309,88 @@
   margin-top: 0.9rem;
 }
 
+.fleet-gallery-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 0.9rem;
+}
+
+.fleet-tab {
+  border: 1px solid rgba(6, 36, 71, 0.16);
+  border-radius: 999px;
+  background: #f8fbff;
+  color: #113863;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+.fleet-tab.is-active {
+  background: #0f335f;
+  color: #f6fbff;
+  border-color: #0f335f;
+}
+
+.fleet-gallery-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(6, 36, 71, 0.14);
+  background: #ffffff;
+  box-shadow: 0 12px 22px rgba(9, 30, 58, 0.1);
+  padding: 0.9rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 0.9rem;
+}
+
+.fleet-gallery-main img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 0.85rem;
+  object-fit: cover;
+}
+
+.fleet-gallery-meta h3 {
+  margin: 0;
+  color: var(--navy-900);
+}
+
+.fleet-gallery-meta p {
+  margin: 0.5rem 0 0;
+  color: var(--text-700);
+}
+
+.fleet-gallery-thumbs {
+  margin-top: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.fleet-thumb {
+  border: 1px solid rgba(6, 36, 71, 0.14);
+  border-radius: 0.55rem;
+  background: #ffffff;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.fleet-thumb.is-active {
+  border-color: #f37d27;
+  box-shadow: 0 0 0 2px rgba(243, 125, 39, 0.18);
+}
+
+.fleet-thumb img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -619,6 +701,7 @@
   .card-grid,
   .fleet-grid,
   .fleet-details-grid,
+  .fleet-gallery-card,
   .trust-section,
   .faq-grid,
   .contact-grid,

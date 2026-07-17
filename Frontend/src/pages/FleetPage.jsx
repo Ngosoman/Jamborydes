@@ -1,5 +1,5 @@
 import PageIntro from '../components/common/PageIntro'
-import { BookingBanner, FleetDetailsSection, FleetSection } from '../components/sections'
+import { BookingBanner, FleetDetailsSection, FleetGallerySection, FleetSection } from '../components/sections'
 import SeoMeta from '../components/seo/SeoMeta'
 
 function FleetPage() {
@@ -17,6 +17,7 @@ function FleetPage() {
       />
       <FleetSection />
       <FleetDetailsSection />
+      <FleetGallerySection />
       <BookingBanner />
     </>
   )
