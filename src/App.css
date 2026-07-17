@@ -356,6 +356,79 @@
   max-width: 55ch;
 }
 
+.booking-form-wrap {
+  margin-top: 1.4rem;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(6, 36, 71, 0.12);
+  background: #ffffff;
+  box-shadow: 0 16px 28px rgba(10, 30, 57, 0.1);
+  padding: clamp(1rem, 2.8vw, 1.6rem);
+}
+
+.booking-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.booking-form label {
+  display: grid;
+  gap: 0.42rem;
+  color: #0c2d55;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  border: 1px solid rgba(10, 44, 84, 0.18);
+  background: #fbfdff;
+  border-radius: 0.78rem;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  color: #0a1a2d;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  outline: 2px solid rgba(243, 125, 39, 0.35);
+  border-color: rgba(243, 125, 39, 0.45);
+}
+
+.booking-form .full-width {
+  grid-column: 1 / -1;
+}
+
+.submit-btn {
+  justify-self: start;
+  border: none;
+  cursor: pointer;
+}
+
+.field-error {
+  margin: 0;
+  color: #b43e10;
+  font-size: 0.8rem;
+}
+
+.form-success {
+  margin: 0;
+  color: #104625;
+  background: #ecfff2;
+  border: 1px solid #b9efc7;
+  border-radius: 0.7rem;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.88rem;
+}
+
 .footer {
   margin-top: 2rem;
   padding-top: 1rem;
@@ -374,7 +447,8 @@
   .trust-section,
   .faq-grid,
   .contact-grid,
-  .pricing-grid {
+  .pricing-grid,
+  .form-grid {
     grid-template-columns: 1fr;
   }
 

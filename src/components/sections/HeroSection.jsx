@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function HeroSection() {
   return (
     <section className="hero-section">
@@ -8,9 +10,9 @@ function HeroSection() {
         Jamboryde keeps every trip smooth from first contact to final drop-off.
       </p>
       <div className="hero-actions">
-        <a href="#booking" className="primary-btn">
+        <Link to="/book" className="primary-btn">
           Book Now
-        </a>
+        </Link>
         <a href="#services" className="ghost-btn">
           Explore Services
         </a>
