@@ -30,7 +30,7 @@ function HeroSection() {
         <h1>Your Journey, Our Priority</h1>
         <p className="hero-copy">
           Safe, punctual, and premium transport in Nairobi and beyond. From JKIA pickups to executive travel,
-          Jamboryde keeps every trip smooth from first contact to final drop-off.
+          Jamborydes keeps every trip smooth from first contact to final drop-off.
         </p>
         <div className="hero-actions">
           <Link
