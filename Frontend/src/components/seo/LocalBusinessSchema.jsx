@@ -1,3 +1,5 @@
+import { COMPANY_CONTACT } from '../../data/siteContent'
+
 function LocalBusinessSchema() {
   const schema = {
     '@context': 'https://schema.org',
@@ -7,15 +9,15 @@ function LocalBusinessSchema() {
     description:
       'Jamboryde Travel offers airport transfers, city rides, intercity travel, and corporate transport in and around Nairobi.',
     areaServed: ['Nairobi', 'Westlands', 'Karen', 'Kilimani', 'Gigiri', 'Naivasha', 'Nakuru'],
-    telephone: '+254700000000',
-    email: 'bookings@jamboryde.com',
+    telephone: COMPANY_CONTACT.phoneDisplay,
+    email: COMPANY_CONTACT.email,
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Nairobi',
       addressCountry: 'KE',
     },
     url: typeof window !== 'undefined' ? window.location.origin : '',
-    sameAs: ['https://wa.me/254700000000'],
+    sameAs: [COMPANY_CONTACT.whatsappUrl],
   }
 
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />

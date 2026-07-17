@@ -1,8 +1,12 @@
+import { COMPANY_CONTACT } from '../../data/siteContent'
+
 function Footer() {
   return (
     <footer className="footer">
       <p>Jamboryde Travel · Nairobi, Kenya</p>
-      <p>Phone: +254 700 000 000 · Email: bookings@jamboryde.com</p>
+      <p>
+        Phone: {COMPANY_CONTACT.phoneDisplay} · Email: {COMPANY_CONTACT.email}
+      </p>
     </footer>
   )
 }

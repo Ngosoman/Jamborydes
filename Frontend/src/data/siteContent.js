@@ -1,5 +1,12 @@
 import { ROUTES } from '../routes/paths'
 
+export const COMPANY_CONTACT = {
+  phoneRaw: '254143300151',
+  phoneDisplay: '+254143300151',
+  whatsappUrl: 'https://wa.me/254143300151',
+  email: 'bookings@jamboryde.com',
+}
+
 export const navLinks = [
   { href: ROUTES.HOME, label: 'Home' },
   { href: ROUTES.ABOUT, label: 'About' },
@@ -180,8 +187,8 @@ export const trustPoints = [
 ]
 
 export const contactItems = [
-  { title: 'Phone', value: '+254 700 000 000' },
-  { title: 'Email', value: 'bookings@jamboryde.com' },
+  { title: 'Phone', value: COMPANY_CONTACT.phoneDisplay },
+  { title: 'Email', value: COMPANY_CONTACT.email },
   { title: 'Operating Hours', value: 'Mon - Sun: 24/7 by booking' },
   { title: 'Office Base', value: 'Nairobi, Kenya' },
 ]

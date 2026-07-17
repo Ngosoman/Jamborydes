@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import LogoMark from '../common/LogoMark';
+import { COMPANY_CONTACT } from '../../data/siteContent';
 
 const links = [
   { label: 'Home', to: '/' },
@@ -41,8 +42,8 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <a href="tel:+254700000000" className="text-sm text-white/50 hover:text-white transition-colors">
-            +254 700 000 000
+          <a href={`tel:${COMPANY_CONTACT.phoneDisplay}`} className="text-sm text-white/50 hover:text-white transition-colors">
+            {COMPANY_CONTACT.phoneDisplay}
           </a>
           <Link
             to="/contact"

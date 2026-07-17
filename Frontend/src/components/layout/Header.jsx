@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { navLinks } from '../../data/siteContent'
+import { COMPANY_CONTACT } from '../../data/siteContent'
 import { getPrefetchHandlers } from '../../routes/prefetch'
 import { trackEvent } from '../../utils/analytics'
 
@@ -27,7 +28,7 @@ function Header() {
           </NavLink>
         ))}
       </nav>
-      <a className="whatsapp-btn" href="https://wa.me/254700000000" target="_blank" rel="noreferrer">
+      <a className="whatsapp-btn" href={COMPANY_CONTACT.whatsappUrl} target="_blank" rel="noreferrer">
         WhatsApp Booking
       </a>
     </header>

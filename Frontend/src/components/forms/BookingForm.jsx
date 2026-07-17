@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { bookingVehicleOptions, services } from '../../data/siteContent'
+import { COMPANY_CONTACT } from '../../data/siteContent'
 import { buildBookingWhatsAppMessage, buildWhatsAppUrl } from '../../utils/bookingMessage'
 import { trackEvent } from '../../utils/analytics'
 
@@ -64,7 +65,7 @@ function BookingForm() {
     }
 
     const message = buildBookingWhatsAppMessage(formData)
-    const whatsappUrl = buildWhatsAppUrl('254700000000', message)
+    const whatsappUrl = buildWhatsAppUrl(COMPANY_CONTACT.phoneRaw, message)
 
     setIsSubmitted(true)
     trackEvent('booking_submit_success', {

@@ -1,7 +1,15 @@
+import { COMPANY_CONTACT } from '../../data/siteContent'
+import { buildWhatsAppUrl } from '../../utils/bookingMessage'
+
 export default function WhatsAppButton() {
+  const whatsappUrl = buildWhatsAppUrl(
+    COMPANY_CONTACT.phoneRaw,
+    'Hello Jamboryde Travel, I would like to make a booking.'
+  )
+
   return (
     <a
-      href="https://wa.me/254700000000?text=Hello%20Jamboryde%20Travel%2C%20I%20would%20like%20to%20make%20a%20booking."
+      href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-lg flex items-center justify-center shadow-lg shadow-green-500/30 hover:shadow-green-600/40 transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 group"
