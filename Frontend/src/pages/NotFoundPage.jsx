@@ -1,5 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import SeoMeta from '../components/seo/SeoMeta'
+import { getPrefetchHandlers } from '../routes/prefetch'
+import { ROUTES } from '../routes/paths'
 
 function NotFoundPage() {
   const { pathname } = useLocation()
@@ -16,7 +18,7 @@ function NotFoundPage() {
         <p className="kicker">404</p>
         <h1>Page not found</h1>
         <p>The page you requested does not exist. Return to the home page to continue browsing Jamboryde Travel.</p>
-        <Link to="/" className="primary-btn">
+        <Link to={ROUTES.HOME} className="primary-btn" {...getPrefetchHandlers(ROUTES.HOME)}>
           Go to Home
         </Link>
       </section>

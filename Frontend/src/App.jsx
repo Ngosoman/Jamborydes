@@ -4,14 +4,23 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import { LEGACY_REDIRECTS, ROUTES } from './routes/paths'
+import {
+  loadBookPage,
+  loadContactPage,
+  loadFleetPage,
+  loadHomePage,
+  loadNotFoundPage,
+  loadPricingPage,
+  loadServicesPage,
+} from './routes/prefetch'
 
-const HomePage = lazy(() => import('./pages/HomePage'))
-const ServicesPage = lazy(() => import('./pages/ServicesPage'))
-const FleetPage = lazy(() => import('./pages/FleetPage'))
-const PricingPage = lazy(() => import('./pages/PricingPage'))
-const ContactPage = lazy(() => import('./pages/ContactPage'))
-const BookPage = lazy(() => import('./pages/BookPage'))
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
+const HomePage = lazy(loadHomePage)
+const ServicesPage = lazy(loadServicesPage)
+const FleetPage = lazy(loadFleetPage)
+const PricingPage = lazy(loadPricingPage)
+const ContactPage = lazy(loadContactPage)
+const BookPage = lazy(loadBookPage)
+const NotFoundPage = lazy(loadNotFoundPage)
 
 function App() {
   return (

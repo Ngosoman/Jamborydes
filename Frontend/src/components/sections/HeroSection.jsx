@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ROUTES } from '../../routes/paths'
+import { getPrefetchHandlers } from '../../routes/prefetch'
 
 function HeroSection() {
   return (
@@ -11,10 +12,10 @@ function HeroSection() {
         Jamboryde keeps every trip smooth from first contact to final drop-off.
       </p>
       <div className="hero-actions">
-        <Link to={ROUTES.BOOK} className="primary-btn">
+        <Link to={ROUTES.BOOK} className="primary-btn" {...getPrefetchHandlers(ROUTES.BOOK)}>
           Book Now
         </Link>
-        <Link to={ROUTES.SERVICES} className="ghost-btn">
+        <Link to={ROUTES.SERVICES} className="ghost-btn" {...getPrefetchHandlers(ROUTES.SERVICES)}>
           Explore Services
         </Link>
       </div>
