@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "Jamborydes",
   "private": true,
   "version": "0.0.0",
@@ -29,5 +29,3 @@
     "vite": "^8.1.1"
   }
 }
-
-
