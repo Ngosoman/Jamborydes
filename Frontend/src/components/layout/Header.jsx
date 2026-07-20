@@ -1,15 +1,20 @@
-﻿import { NavLink } from 'react-router-dom'
+﻿import { Link, NavLink } from 'react-router-dom'
 import { navLinks } from '../../data/siteContent'
 import { COMPANY_CONTACT } from '../../data/siteContent'
 import { getPrefetchHandlers } from '../../routes/prefetch'
 import { trackEvent } from '../../utils/analytics'
 
 function Header() {
+  const navItems = navLinks.filter((link) => link.href !== '/')
+
   return (
     <header className="topbar">
-      <p className="brand">Jamborydes TRAVEL</p>
+      <Link to="/" className="brand">
+        Jamborydes TRAVEL
+      </Link>
+
       <nav className="top-nav" aria-label="Main navigation">
-        {navLinks.map((link) => (
+        {navItems.map((link) => (
           <NavLink
             key={link.href}
             to={link.href}
@@ -28,6 +33,7 @@ function Header() {
           </NavLink>
         ))}
       </nav>
+
       <a className="whatsapp-btn" href={COMPANY_CONTACT.whatsappUrl} target="_blank" rel="noreferrer">
         WhatsApp Booking
       </a>

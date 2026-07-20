@@ -8,7 +8,7 @@ export const COMPANY_CONTACT = {
 }
 
 export const navLinks = [
-  { href: ROUTES.HOME, label: 'Home' },
+  { href: ROUTES.HOME, label: 'Jamborydes TRAVEL' },
   { href: ROUTES.ABOUT, label: 'About' },
   { href: ROUTES.SERVICES, label: 'Services' },
   { href: ROUTES.FLEET, label: 'Fleet' },
